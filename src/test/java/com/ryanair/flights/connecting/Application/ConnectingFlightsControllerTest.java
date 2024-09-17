@@ -70,7 +70,7 @@ class ConnectingFlightsControllerTest {
                 .andExpect(jsonPath("$[0].legs.length()", is(1)))
                 .andExpect(jsonPath("$[0].legs[0].departureAirport", is("ABC")))
                 .andExpect(jsonPath("$[0].legs[0].arrivalAirport", is("DEF")))
-                .andExpect(jsonPath("$[0].legs[0].departureDateTime", is("2024-09-10T10:00:00")))
-                .andExpect(jsonPath("$[0].legs[0].arrivalDateTime", is("2024-09-10T11:00:00")));
+                .andExpect(jsonPath("$[0].legs[0].departureDateTime", is("2024-09-10 10:00:00")))
+                .andExpect(jsonPath("$[0].legs[0].arrivalDateTime", is("2024-09-10 11:00:00")));
     }
 }

@@ -17,6 +17,9 @@ public class ConnectingApplication {
 		SpringApplication.run(ConnectingApplication.class, args);
 	}
 
+	/**
+	 * Bean representing the Lambda function to find flights.
+	 */
 	@Bean
 	public Function<FlightRequest, List<FlightResponse>> findFlights(ConnectingFlightService flightService) {
 		return flightService::findFlights;
